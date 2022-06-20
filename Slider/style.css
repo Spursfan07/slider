@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --DB: hsl(240, 38%, 20%);
+    --GB: hsl(240, 18%, 77%);
+}
+
+*,
+*::after,
+*::before {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    background-color: aqua;
+    padding-bottom: 80px;
+    background: url(pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.295);
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-top,
+.flex-bottom {
+    flex-basis: 50%;
+}
+
+.container-top {
+    width: 100%;
+    padding-top: 80px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    background: url(pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-position: left  bottom;
+    background-size: 85%;
+    position: relative;
+}
+
+.container-img {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.295);
+}
+
+.container-img img {
+    object-fit: contain;
+    width: 100%;
+    display: block;
+}
+
+.button {
+    border-radius: 25px;
+    position: absolute;
+    bottom: 1%;
+    left: 15%;
+    background-color: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.295);
+}
+
+.button span{
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+
+.button span:first-child {
+    margin-right: 5px;
+    border-radius: 25px 0 0 25px;
+}
+
+.button span:hover {
+    background-color: var(--GB);
+}
+
+.button img {
+    cursor: pointer;
+    width: 10px;
+    user-select: none;
+}
+
+.container-bottom {
+    width: 100%;
+    position: relative;
+    left: 20%;
+    background: url(pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: left 15% top 40%;
+}
+
+.container-text {
+    width: 100%;
+    padding-top: 35%;
+}
+
+.text{
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--DB);
+    display: inline-block;
+}
+
+.container-text span {
+    font-size: 1.4rem;
+    color: var(--GB);
+    display: inline-block;
+    margin-left: 2px;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .text {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .text {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .text {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text {
+        font-size: 2rem;
+    }
+
+    .name {
+        font-size: 1.4rem;
+    }
+
+    .container-text span {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .text {
+        font-size: 1.8rem;
+    }
+
+    .name {
+        font-size: 1.4rem;
+    }
+
+    .container-text span {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        padding: 20px 20px 20px;
+        box-shadow: 0 0 0 #fff;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .container-top {
+        padding-top: 30px;
+        padding-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .container-img {
+        box-shadow: 0 0 0 #fff;
+    }
+
+    .button {
+        left: 35%;
+    }
+
+    .container-bottom {
+        left: 0;
+        background-position: left 50% top 0;
+        background-size: 15%;
+    }
+
+    .container-text {
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 2.1rem;
+        display: block;
+    }
+
+    .name {
+        display: block;
+    }
+
+    .container-text span {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .text {
+        font-size: 2.2rem;
+    }
+
+    .name {
+        font-size: 1.7rem;
+    }
+}
